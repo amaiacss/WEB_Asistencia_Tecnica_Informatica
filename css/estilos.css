@@ -1,0 +1,147 @@
+
+@font-face {
+    font-family: "fuente_1";
+    src:url("../fonts/good\ times\ rg.ttf") format("truetype"),
+        url("../fonts/good\ times\ rg.woff") format("woff");
+        font-style: normal;
+        font-weight: normal;
+}
+
+@font-face {
+    font-family: "fuente_2";
+    src: url(../fonts/Roboto-Medium.ttf) format("truetype"),
+         url(../fonts/Roboto-Medium.woff) format("woff");
+         font-style: normal;
+         font-weight: normal;
+}
+
+body {
+    font-family: fuente_2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: fuente_1, sans-serif !important; 
+}
+
+/*  sobreescribir color letra PC SERVICES */
+#mainNav .navbar-brand, #mainNav .navbar-nav > li.nav-item > a.nav-link{
+    color: black;
+}
+
+#about {
+    background-color: #f6f9fc;
+    color: #354c66;
+}
+
+/*Estilos para la flecha arriba ancla*/
+#button {
+	display: inline-block; /*para poder darle dimensiones*/
+	/*botón cuadrado y esquinas redondeadas*/
+	background-color: #ff9800;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	margin: 15px;
+	/*vamos a fijar la flecha para que se muestre en el mismo sitio*/
+	position: fixed;
+	bottom: 30px;
+	right: 15px;
+	z-index: 1000; /* al poner en z-index un valor muy alto nos 
+	aseguramos que el botón siempre se coloca por encima de otros elementos*/
+
+	/*De manera predeterminada la flecha estará oculta*/
+	transition: background-color .3s, opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#button:hover {
+	cursor: pointer;
+	background-color: #333;
+}
+
+#button:active {
+	background-color: #555;
+}
+#contact {
+	background-color: #212529;
+    background-repeat: no-repeat;
+    background-position: 50%;
+	color: azure;
+}
+
+/*estilos para hacer el mapa responsive*/
+.google-maps {
+	position: relative;
+	padding-bottom: 75%;
+	height: 0;
+	overflow: hidden;
+}
+.google-maps iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+/*fin del mapa responsive*/
+
+#enlace-cookies {
+	text-decoration: none;
+}
+
+/*Ahora añadimos el icono y elegimos un icono de la biblioteca Fontawesome
+ el icono en concreto es el Chevron Up*/
+ #button::after {
+ 	/*position: absolute;*/
+ 	content:  "\f077"; /*Chevron Up*/
+ 	font-family: FontAwesome;
+ 	font-weight: normal;
+ 	font-style: normal;
+ 	font-size: 2em;
+ 	line-height: 50px;
+ 	color: #fff;
+ }
+
+ /*Para hacer el botón flecha visible*/
+ #button.show {
+ 	opacity: 1;
+ 	visibility: visible;
+ }
+
+ @media (min-width: 500px){
+ 	#button {
+ 		margin: 30px;
+ 	} 	
+ }
+/*fin flecha arriba*/
+/*  */
+.error {
+	color: red;
+}
+/*estilos para el tooltip*/
+label #name-error {
+    display: inline-block;
+    width: 5em;
+}
+/*fin estilos tooltip*/
+
+.modal-body {
+	background-color: #c2bbc2;
+}
+
+/* ESTILOS POLITICA DE PRIVACIDAD*/
+.privacidad {
+	
+	padding: 5rem;
+	background-color: #f6f9fc;
+    color: #354c66;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 500px) {
+	.privacidad {
+ 		padding: 2rem;
+ 	}
+}
